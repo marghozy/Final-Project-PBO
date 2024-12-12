@@ -46,7 +46,7 @@ Kegunaan aplikasi ini adalah untuk meningkatkan efisiensi dan kenyamanan penggun
             <img src="https://github.com/user-attachments/assets/ab5d4dee-ef86-4b2d-86f7-d61de2939fc2" alt="Image 5" style="width: 100%; height: auto;">
         </td>
         <td style="border: 1px solid transparent; padding: 5px; text-align: center;">
-            <em>Empty</em>
+            <img src="https://github.com/user-attachments/assets/7fbba838-f013-49ba-b132-db211eb3459c" alt="Image 6" style="width: 100%; height: auto;">
         </td>
     </tr>
 </table>
