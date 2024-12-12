@@ -128,7 +128,9 @@ Methods:
 + PaymentPage(String, String, String, int)
 ```
 
-6. Hubungan Antar Kelas
+6. BaseFrame
+
+7. Hubungan Antar Kelas
 
 ```
 CinemaTicketSystem: Titik awal program, memanggil MainMenu.
