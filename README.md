@@ -58,90 +58,107 @@ Terinspirasi dari Aplikasi tix.id
 1. CinemaTicketSystem
 
 ```
-Attributes:
+Fungsi:
 
-(none)
+Entry point aplikasi.
 
-Methods:
+Metode Utama:
 
-+ main(String[]): void
+main(String[] args) memanggil kelas MainMenu.
 ```
 
 2. MainMenu
 
 ```
-Attributes:
+Fungsi:
 
-- frame: JFrame
+Tampilan awal aplikasi.
 
-Methods:
+Atribut:
 
-+ MainMenu()
+frame: JFrame untuk UI.
+
+Metode:
+
+Konstruktor MainMenu(): Membuat frame utama dengan tombol untuk melihat jadwal film atau keluar.
 ```
 
 3. MovieSelection
 
 ```
-Attributes:
+Fungsi:
 
-- frame: JFrame
-- movies: Map<String, String[]>
-- movieImages: Map<String, String>
+Menampilkan daftar film dengan jadwal tayang.
 
-Methods:
+Atribut:
 
-+ MovieSelection()
+movies: Map untuk menyimpan daftar film dan jadwalnya.
+movieImages: Map untuk menyimpan poster film.
+
+Metode:
+
+Konstruktor MovieSelection(): Menyediakan daftar film.
+createScaledIcon(String, int, int): Membuat ikon poster berskala.
 ```
 
 4. SeatSelection
 
 ```
-Attributes:
+Fungsi:
 
-- frame: JFrame
-- selectedMovie: String
-- times: String[]
-- selectedTime: String
-- ticketCount: int
-- selectedSeats: List<String>
-- bookedSeats: Set<String>
+Memilih kursi berdasarkan jadwal tayang.
 
-Methods:
+Atribut:
 
-+ SeatSelection(String, String[])
-- generateSeatsPanel(): JPanel
+selectedMovie, selectedTime, ticketCount, selectedSeats: Informasi tentang pemesanan.
+bookedSeats: Set kursi yang telah dipesan.
+
+Metode:
+
+SeatSelection(String, String[]): Mengelola pemilihan kursi.
+generateSeatsPanel(): Membuat grid untuk kursi.
 ```
 
 5. PaymentPage
 
 ```
-Attributes:
+Fungsi:
 
-- frame: JFrame
-- movie: String
-- time: String
-- seats: String
-- totalPrice: int
+Menampilkan ringkasan pemesanan tiket.
 
-Methods:
+Atribut:
 
-+ PaymentPage(String, String, String, int)
+movie, time, seats, totalPrice: Detail pemesanan.
+
+Metode:
+
+Konstruktor PaymentPage(String, String, String, int): Membuat halaman pembayaran.
 ```
 
 6. BaseFrame
 
-7. Hubungan Antar Kelas
+```
+Fungsi:
+
+Kelas dasar untuk semua frame aplikasi.
+
+Metode:
+
+Konstruktor BaseFrame(String, int, int): Mengatur properti dasar frame.
+```
+
+8. Hubungan Antar Kelas
 
 ```
 CinemaTicketSystem: Titik awal program, memanggil MainMenu.
 
-MainMenu: Menyediakan akses ke menu utama dan navigasi ke MovieSelection.
+MainMenu: Mengarah ke MovieSelection.
 
-MovieSelection: Menampilkan daftar film dan memungkinkan pengguna memilih film serta waktu tayang, lalu melanjutkan ke SeatSelection.
+MovieSelection: Memilih film dan waktu, lanjut ke SeatSelection.
 
-SeatSelection: Memungkinkan pengguna memilih kursi sesuai jumlah tiket, kemudian melanjutkan ke PaymentPage.
+SeatSelection: Memilih kursi, lanjut ke PaymentPage.
 
-PaymentPage: Menampilkan ringkasan pembelian tiket dan menyelesaikan transaksi.
+PaymentPage: Menampilkan ringkasan dan kembali ke MainMenu setelah konfirmasi.
 ```
 
 ### Desain UI
@@ -159,55 +176,43 @@ Tombol:
 
 Navigasi:
 
-Tombol "Lihat Jadwal Film" membawa pengguna ke MovieSelection.
+Tombol "Lihat Jadwal Film" mengarah ke MovieSelection.
 ```
 
 Movie Selection
 ```
 Tampilan:
 
-Grid poster film (dengan gambar jika tersedia).
-Nama film di bawah poster.
+Poster film dalam grid.
 Tombol "Kembali" untuk kembali ke MainMenu.
 
 Navigasi:
 
-Memilih film membawa pengguna ke SeatSelection.
+Memilih film mengarah ke SeatSelection.
 ```
 
 Seat Selection
 ```
 Tampilan:
 
-Dropdown untuk memilih waktu tayang.
+Dropdown waktu tayang.
 Input jumlah tiket.
-Grid kursi (10x20, diwarnai hijau jika dipilih dan abu-abu jika sudah dipesan).
-
-Tombol:
-
-"Lanjut" untuk melanjutkan ke pemilihan kursi.
-"Lanjut ke Pembayaran" untuk menuju PaymentPage.
-"Kembali" untuk kembali ke MovieSelection.
+Grid kursi (10x20, warna hijau untuk kursi dipilih, abu-abu untuk kursi terpesan).
 
 Navigasi:
 
-Memilih jumlah kursi sesuai tiket, lalu melanjutkan ke pembayaran.
+Memilih jumlah kursi, lanjut ke PaymentPage.
 ```
 
 Payment Page
 ```
 Tampilan:
 
-Ringkasan:
-Nama film.
-Waktu tayang.
-Kursi yang dipilih.
-Total harga dalam format lokal Indonesia.
+Ringkasan pembelian: film, waktu tayang, kursi, total harga.
+Tombol "Konfirmasi dan Cetak Tiket".
 
-Tombol:
-
-"Konfirmasi dan Cetak Tiket".
 Navigasi:
+
 Setelah konfirmasi, kembali ke MainMenu.
 ```
 
@@ -215,15 +220,17 @@ Setelah konfirmasi, kembali ke MainMenu.
 Kode untuk menciptakan Absolute Cinema, meliputi:
 
 ```
-CinemaTicketSystem.java sebagai entri utama program.
+CinemaTicketSystem.java: Entry point program, memulai aplikasi dan memanggil menu utama.
 
-MainMenu.java untuk tampilan awal.
+MainMenu.java: Menampilkan tampilan awal dengan opsi untuk melihat jadwal film atau keluar.
 
-MovieSelection.java untuk memilih film dan waktu tayang.
+MovieSelection.java: Menampilkan daftar film, sinopsis, dan jadwal tayang untuk dipilih.
 
-SeatSelection.java untuk memilih kursi berdasarkan waktu tayang.
+SeatSelection.java: Memungkinkan pemilihan kursi berdasarkan jadwal tayang dan jumlah tiket.
 
-PaymentPage.java untuk konfirmasi dan pembayaran tiket.
+PaymentPage.java: Menampilkan ringkasan pembelian dan mengelola proses pembayaran.
+
+BaseFrame.java: Kelas dasar untuk semua tampilan (frame) dalam aplikasi. Menyediakan pengaturan umum untuk frame seperti ukuran, pengaturan layout, dan tampilan dasar lainnya. Semua frame lainnya, seperti MovieSelection, SeatSelection, dan PaymentPage, akan mewarisi kelas ini.
 ```
 
 Kode-kodenya mencakup fungsionalitas untuk memandu pengguna dari layar awal hingga konfirmasi tiket dengan antarmuka yang menarik.
