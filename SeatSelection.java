@@ -1,9 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
-import java.util.Set;
-import java.util.HashSet;
+import java.util.ArrayList;
 
 public class SeatSelection extends BaseFrame {
     private final String movie;
@@ -11,7 +10,7 @@ public class SeatSelection extends BaseFrame {
     private String selectedTime;
     private int ticketCount;
     private final List<String> selectedSeats = new ArrayList<>();
-    private static final Set<String> bookedSeats = new HashSet<>();
+    private static final Map<String, Set<String>> bookedSeatsMap = new HashMap<>();
     private static final int TICKET_PRICE = 25000;
 
     public SeatSelection(String movie, String[] times) {
@@ -47,11 +46,14 @@ public class SeatSelection extends BaseFrame {
 
     private void showSeatsPanel() {
         JPanel seatsPanel = new JPanel(new GridLayout(10, 20, 5, 5));
+        String bookingKey = movie + "_" + selectedTime;
+        bookedSeatsMap.putIfAbsent(bookingKey, new HashSet<>());
+
         for (char row = 'A'; row <= 'J'; row++) {
             for (int col = 1; col <= 20; col++) {
                 String seat = row + String.valueOf(col);
                 JButton seatButton = new JButton(seat);
-                if (bookedSeats.contains(seat)) {
+                if (bookedSeatsMap.get(bookingKey).contains(seat)) {
                     seatButton.setEnabled(false);
                     seatButton.setBackground(Color.GRAY);
                 }
@@ -71,7 +73,7 @@ public class SeatSelection extends BaseFrame {
         JButton confirmButton = new JButton("Lanjut ke Pembayaran");
         confirmButton.addActionListener(e -> {
             if (selectedSeats.size() == ticketCount) {
-                bookedSeats.addAll(selectedSeats);
+                bookedSeatsMap.get(bookingKey).addAll(selectedSeats);
                 dispose();
                 new PaymentPage(movie, selectedTime, String.join(", ", selectedSeats), ticketCount * TICKET_PRICE);
             } else {
