@@ -1,5 +1,7 @@
 # Final-Project-PBO
 
+![absolutecinema](https://github.com/user-attachments/assets/6ebf2b35-d260-44c1-b813-4754251f5ec9)
+
 Usulan Final Project PBO G 2024 (Kelompok 13)
 | Name | NRP | Kelas |
 | --- | --- | ----------|
