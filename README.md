@@ -230,7 +230,7 @@ SeatSelection.java: Memungkinkan pemilihan kursi berdasarkan jadwal tayang dan j
 
 PaymentPage.java: Menampilkan ringkasan pembelian dan mengelola proses pembayaran.
 
-BaseFrame.java: Kelas dasar untuk semua tampilan (frame) dalam aplikasi. Menyediakan pengaturan umum untuk frame seperti ukuran, pengaturan layout, dan tampilan dasar lainnya. Semua frame lainnya, seperti MovieSelection, SeatSelection, dan PaymentPage, akan mewarisi kelas ini.
+BaseFrame.java: Kelas dasar untuk semua tampilan (frame) dalam aplikasi.
 ```
 
 Kode-kodenya mencakup fungsionalitas untuk memandu pengguna dari layar awal hingga konfirmasi tiket dengan antarmuka yang menarik.
