@@ -39,7 +39,8 @@ Terinspirasi dari Aplikasi tix.id
 1. CinemaTicketSystem
 
 ```
-Attributes: (none)
+Attributes:
+(none)
 Methods:
 + main(String[]): void
 ```
