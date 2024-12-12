@@ -41,6 +41,7 @@ Terinspirasi dari Aplikasi tix.id
 ```
 Attributes:
 (none)
+
 Methods:
 + main(String[]): void
 ```
@@ -50,6 +51,7 @@ Methods:
 ```
 Attributes:
 - frame: JFrame
+
 Methods:
 + MainMenu()
 ```
@@ -61,6 +63,7 @@ Attributes:
 - frame: JFrame
 - movies: Map<String, String[]>
 - movieImages: Map<String, String>
+
 Methods:
 + MovieSelection()
 ```
@@ -76,6 +79,7 @@ Attributes:
 - ticketCount: int
 - selectedSeats: List<String>
 - bookedSeats: Set<String>
+
 Methods:
 + SeatSelection(String, String[])
 - generateSeatsPanel(): JPanel
@@ -90,6 +94,7 @@ Attributes:
 - time: String
 - seats: String
 - totalPrice: int
+
 Methods:
 + PaymentPage(String, String, String, int)
 ```
@@ -98,9 +103,13 @@ Methods:
 
 ```
 CinemaTicketSystem: Titik awal program, memanggil MainMenu.
+
 MainMenu: Menyediakan akses ke menu utama dan navigasi ke MovieSelection.
+
 MovieSelection: Menampilkan daftar film dan memungkinkan pengguna memilih film serta waktu tayang, lalu melanjutkan ke SeatSelection.
+
 SeatSelection: Memungkinkan pengguna memilih kursi sesuai jumlah tiket, kemudian melanjutkan ke PaymentPage.
+
 PaymentPage: Menampilkan ringkasan pembelian tiket dan menyelesaikan transaksi.
 ```
 
@@ -109,47 +118,63 @@ PaymentPage: Menampilkan ringkasan pembelian tiket dan menyelesaikan transaksi.
 Main Menu
 ```
 Tampilan:
+
 Judul: "Selamat Datang di Cinema Ticket System".
+
 Tombol:
+
 "Lihat Jadwal Film".
 "Keluar".
+
 Navigasi:
+
 Tombol "Lihat Jadwal Film" membawa pengguna ke MovieSelection.
 ```
 
 Movie Selection
 ```
 Tampilan:
+
 Grid poster film (dengan gambar jika tersedia).
 Nama film di bawah poster.
 Tombol "Kembali" untuk kembali ke MainMenu.
+
 Navigasi:
+
 Memilih film membawa pengguna ke SeatSelection.
 ```
 
 Seat Selection
 ```
 Tampilan:
+
 Dropdown untuk memilih waktu tayang.
 Input jumlah tiket.
 Grid kursi (10x20, diwarnai hijau jika dipilih dan abu-abu jika sudah dipesan).
+
 Tombol:
+
 "Lanjut" untuk melanjutkan ke pemilihan kursi.
 "Lanjut ke Pembayaran" untuk menuju PaymentPage.
 "Kembali" untuk kembali ke MovieSelection.
+
 Navigasi:
+
 Memilih jumlah kursi sesuai tiket, lalu melanjutkan ke pembayaran.
 ```
 
 Payment Page
 ```
 Tampilan:
+
 Ringkasan:
 Nama film.
 Waktu tayang.
 Kursi yang dipilih.
 Total harga dalam format lokal Indonesia.
+
 Tombol:
+
 "Konfirmasi dan Cetak Tiket".
 Navigasi:
 Setelah konfirmasi, kembali ke MainMenu.
@@ -160,9 +185,13 @@ Kode untuk menciptakan Absolute Cinema, meliputi:
 
 ```
 CinemaTicketSystem.java sebagai entri utama program.
+
 MainMenu.java untuk tampilan awal.
+
 MovieSelection.java untuk memilih film dan waktu tayang.
+
 SeatSelection.java untuk memilih kursi berdasarkan waktu tayang.
+
 PaymentPage.java untuk konfirmasi dan pembayaran tiket.
 ```
 
