@@ -1,7 +1,5 @@
 # Final-Project-PBO
 
-![absolutecinema](https://github.com/user-attachments/assets/6ebf2b35-d260-44c1-b813-4754251f5ec9)
-
 Usulan Final Project PBO G 2024 (Kelompok 13)
 | Name | NRP | Kelas |
 | --- | --- | ----------|
@@ -227,3 +225,5 @@ PaymentPage.java untuk konfirmasi dan pembayaran tiket.
 ```
 
 Kode-kodenya mencakup fungsionalitas untuk memandu pengguna dari layar awal hingga konfirmasi tiket dengan antarmuka yang menarik.
+
+![absolutecinema](https://github.com/user-attachments/assets/207dd647-3921-4522-b8f1-edb5e2eeb913)
