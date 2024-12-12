@@ -19,7 +19,7 @@ Absolute Cinema adalah aplikasi berbasis online yang dirancang untuk mempermudah
 - Tampilan antarmuka pengguna yang ramah dan interaktif.
 - Daftar film yang terorganisir berdasarkan studio dan waktu tayang.
 - Pemilihan kursi dengan visualisasi tata letak kursi studio.
-- xRingkasan dan konfirmasi tiket sebelum pembayaran.
+- Ringkasan dan konfirmasi tiket sebelum pembayaran.
 ```
 
 Kegunaan aplikasi ini adalah untuk meningkatkan efisiensi dan kenyamanan pengguna dalam memesan tiket tanpa harus antre di lokasi bioskop.
