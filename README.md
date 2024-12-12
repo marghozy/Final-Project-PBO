@@ -26,11 +26,30 @@ Kegunaan aplikasi ini adalah untuk meningkatkan efisiensi dan kenyamanan penggun
 
 ### Desain User Interface
 
-![image](https://github.com/user-attachments/assets/5bc2560d-3259-4cad-a524-ac475f81ff54)
-![image](https://github.com/user-attachments/assets/73c4c80a-725a-4b09-a9ec-ce0b84b3fa25)
-![image](https://github.com/user-attachments/assets/73ba445b-1e1d-4e24-b355-a26da6cdd5b1)
-![image](https://github.com/user-attachments/assets/9e91ab0b-8ca8-49b9-9a8f-eb55782dead4)
-![image](https://github.com/user-attachments/assets/ab5d4dee-ef86-4b2d-86f7-d61de2939fc2)
+<table style="border-collapse: collapse; width: 100%; max-width: 800px; table-layout: fixed;">
+    <tr>
+        <td style="border: 1px solid transparent; padding: 5px; text-align: center;">
+            <img src="https://github.com/user-attachments/assets/5bc2560d-3259-4cad-a524-ac475f81ff54" alt="Image 1" style="width: 100%; height: auto;">
+        </td>
+        <td style="border: 1px solid transparent; padding: 5px; text-align: center;">
+            <img src="https://github.com/user-attachments/assets/73c4c80a-725a-4b09-a9ec-ce0b84b3fa25" alt="Image 2" style="width: 100%; height: auto;">
+        </td>
+        <td style="border: 1px solid transparent; padding: 5px; text-align: center;">
+            <img src="https://github.com/user-attachments/assets/73ba445b-1e1d-4e24-b355-a26da6cdd5b1" alt="Image 3" style="width: 100%; height: auto;">
+        </td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid transparent; padding: 5px; text-align: center;">
+            <img src="https://github.com/user-attachments/assets/9e91ab0b-8ca8-49b9-9a8f-eb55782dead4" alt="Image 4" style="width: 100%; height: auto;">
+        </td>
+        <td style="border: 1px solid transparent; padding: 5px; text-align: center;">
+            <img src="https://github.com/user-attachments/assets/ab5d4dee-ef86-4b2d-86f7-d61de2939fc2" alt="Image 5" style="width: 100%; height: auto;">
+        </td>
+        <td style="border: 1px solid transparent; padding: 5px; text-align: center;">
+            <em>Empty</em>
+        </td>
+    </tr>
+</table>
 
 Terinspirasi dari Aplikasi tix.id
 
@@ -40,9 +59,11 @@ Terinspirasi dari Aplikasi tix.id
 
 ```
 Attributes:
+
 (none)
 
 Methods:
+
 + main(String[]): void
 ```
 
@@ -50,9 +71,11 @@ Methods:
 
 ```
 Attributes:
+
 - frame: JFrame
 
 Methods:
+
 + MainMenu()
 ```
 
@@ -60,11 +83,13 @@ Methods:
 
 ```
 Attributes:
+
 - frame: JFrame
 - movies: Map<String, String[]>
 - movieImages: Map<String, String>
 
 Methods:
+
 + MovieSelection()
 ```
 
@@ -72,6 +97,7 @@ Methods:
 
 ```
 Attributes:
+
 - frame: JFrame
 - selectedMovie: String
 - times: String[]
@@ -81,6 +107,7 @@ Attributes:
 - bookedSeats: Set<String>
 
 Methods:
+
 + SeatSelection(String, String[])
 - generateSeatsPanel(): JPanel
 ```
@@ -89,6 +116,7 @@ Methods:
 
 ```
 Attributes:
+
 - frame: JFrame
 - movie: String
 - time: String
@@ -96,6 +124,7 @@ Attributes:
 - totalPrice: int
 
 Methods:
+
 + PaymentPage(String, String, String, int)
 ```
 
